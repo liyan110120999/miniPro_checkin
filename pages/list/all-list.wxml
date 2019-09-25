@@ -1,0 +1,30 @@
+<!-- <view class="container">
+  <view class="body-view">
+    <text>{{name}}</text>
+    <button open-type='getUserInfo'></button>
+  </view>
+</view> -->
+
+<!-- 导航模块 -->
+<block>
+  <view class="view_nav">
+    <button class="nav_button" bindtap="nav_button01">全部</button>
+    <button class="nav_button" bindtap="nav_button02">已签到</button>
+    <button class="nav_button" bindtap="nav_button03">未签到</button>
+  </view>
+</block>
+
+<!-- 循环列表 -->
+<block class="view_list" wx:for="{{list}}" wx:key="{{list}}">
+  <!-- 滑动视图 -->
+  <scroll-view id="{{item.id}}" class="view_class" scroll-y>
+      <text class="text_id">{{index.list.id}}</text>
+      <text class="text_name">{{list[index].name}} </text> 
+      <text class="text_type">{{list[index].type}} </text> 
+       <text class="text_company" >{{list[index].company}} </text>
+      <text class="text_position">{{list[index].position}} </text> 
+     
+  </scroll-view>
+</block>
+
+ <!-- <text>结束</text>  -->

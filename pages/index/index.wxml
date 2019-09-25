@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    <!-- </block> -->
+  <!-- </view>  -->
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <!-- 嘉宾信息展示区 -->
+  <view class="btn-area">
+    <view class="body-view">
+      <text>{{CI_name}}</text>
+      <text> {{CI_company}}</text>
+      <text> {{CI_type}}</text>
+      <view></view>
+      <text>{{CI_email}}</text>
+      <view></view>
+      <text> {{CI_phone}}</text>
+      <view></view>
+      <text>{{CI_position}}</text>
+    </view>
+    
+    <progress percent='100'> </progress>
+  </view>
+
+  <view>
+    <!-- <text>内容展示区</text> -->
+      <text class="text_id">{{index.list.id}}</text>
+      <text class="text_name">{{list[index].name}} </text> 
+      <text class="text_type">{{list[index].type}} </text> 
+       <text class="text_company" >{{list[index].company}} </text>
+      <text class="text_position">{{list[index].position}} </text> 
+  </view>
+
+  <view class="view01">
+    <text class="errorMsg">{{errorMsg}}</text>
+    <button bindtap="ScanButton" disabled="{{ScanButDisabled}}" type='primary'>扫描二维码</button>
+    <!-- <button class="logButton_Class" bindtap="logButton">查看log:{{text}}</button> -->
+
+    <button class="CheckInButton_Class" disabled="{{CheckInButDisabled}}" type='{{CheckInButType}}' bindtap="CheckInButton">
+      {{CheckInButtonText}}
+    </button>
+
+    <navigator class="navigator-log" url="/pages/nsi-log/nsi-log" hover-class="navigator-hover"></navigator>
+  </view>
+  <!-- 底部功能按钮 -->
+  <view>
+
+  </view>
+
+
+
+
+</view>
